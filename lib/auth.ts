@@ -21,9 +21,9 @@ export const auth = betterAuth({
     emailOTP({
       async sendVerificationOTP({ email, otp }) {
         await resend.emails.send({
-          from: "MarshalLMS <onboarding@resend.dev>",
+          from: "DevLMS <onboarding@resend.dev>",
           to: [email],
-          subject: "MarshalLMS - Verify your email",
+          subject: "DevLMS - Please Verify your email",
           html: `<p>Your OTP is <strong>${otp}</strong></p>`,
         });
       },

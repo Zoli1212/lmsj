@@ -27,3 +27,51 @@ meditació
 qi gong
 fitness
 séta
+500 50 50 20
+----
+now:
+lms jan ! szakdoga
+lms rn ! szakgoga galaxi
+ecom becod ! szakdoga
+ecom rn ! szakdoga galaxi
+personnal ai !
+webinar !
+vibe !
+fitness rn !
+bassir ecom !
+-----
+sanghjaam ecom
+uber
+ecom rn 2.
+ecom node rn
+lms becod
+interviewer
+career
+vapi
+webdev lms
+django ecom
+django ecom
+django banking
+django celery
+websocket 2
+interview prep
+----
+booleanart
+jan
+js
+ts
+moshi django
+py
+manik
+codeev
+david
+max
+py engineer
+vapi
+gitlab
+sanghjaam nodejs
+dsa
+-----
+hétvége 1 lms
+hétvége 2 lms
++ munkafázis tételek
