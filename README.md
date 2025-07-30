@@ -76,3 +76,30 @@ dsa
 hétvége 1 lms
 hétvége 2 lms
 + munkafázis tételek
+---
+jan
+wp
+antonio
+tube
+becodemy
+bassir
+sonny
+galaxy
+mg
+sanghjaam
+vannguyen
+sathya
+----
+booleanart
+notjustdev
+moshi
+manik
+codeev
+ai engineer
+nestjs 28
+max
+nestjs
+nestjs
+nextjs
+jan nextjs
+----

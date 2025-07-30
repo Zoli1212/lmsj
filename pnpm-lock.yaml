@@ -105,13 +105,13 @@ importers:
         specifier: ^2.22.3
         version: 2.26.1(@tiptap/core@2.26.1(@tiptap/pm@2.26.1))(@tiptap/pm@2.26.1)
       '@tiptap/pm':
-        specifier: ^2.14.0
+        specifier: ^2.26.1
         version: 2.26.1
       '@tiptap/react':
-        specifier: ^2.14.0
+        specifier: ^2.26.1
         version: 2.26.1(@tiptap/core@2.26.1(@tiptap/pm@2.26.1))(@tiptap/pm@2.26.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@tiptap/starter-kit':
-        specifier: ^2.14.0
+        specifier: ^2.26.1
         version: 2.26.1
       better-auth:
         specifier: ^1.2.8
