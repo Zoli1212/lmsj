@@ -99,7 +99,7 @@ importers:
         specifier: ^8.21.3
         version: 8.21.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@tiptap/extension-text-align':
-        specifier: ^2.14.0
+        specifier: ^2.26.1
         version: 2.26.1(@tiptap/core@2.26.1(@tiptap/pm@2.26.1))
       '@tiptap/html':
         specifier: ^2.22.3
