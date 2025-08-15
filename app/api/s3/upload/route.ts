@@ -4,9 +4,10 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { v4 as uuidv4 } from "uuid";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
-import { S3 } from "@/lib/S3Client";
+
 import arcjet, { fixedWindow } from "@/lib/arcjet";
 import { requireAdmin } from "@/app/data/admin/require-admin";
+import { S3 } from "@/lib/S3Client";
 
 const fileUploadSchema = z.object({
   fileName: z.string().min(1, { message: "Filename is required" }),
