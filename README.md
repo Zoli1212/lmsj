@@ -33,7 +33,10 @@ now:
 lms jan ! szakdoga
 lms rn ! szakgoga galaxi
 ecom becod ! szakdoga
-ecom rn ! szakdoga galaxi
+ecom rn ! szakdoga galaxies
+travel planner nextjs
+travel rn sunaj
+customer ai antonio
 personnal ai !
 webinar !
 vibe !
@@ -72,6 +75,7 @@ vapi
 gitlab
 sanghjaam nodejs
 dsa
+mlops
 -----
 hétvége 1 lms
 hétvége 2 lms
@@ -103,3 +107,21 @@ nestjs
 nextjs
 jan nextjs
 ----
+lms
+lms rn
+ecom becodemy
+ecom antonio
+ecom bassir
+vibe
+webinar
+meet.ai
+ecom 
+travel ai
+travel rn
+caption rn
+fitness rn
+lms becodemy + rn
+----
+2 + 10
+1000 + 50 + 20 min
+1 qi gong

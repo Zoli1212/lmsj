@@ -2,15 +2,12 @@
 
 import { requireAdmin } from "@/data/admin/require-admin";
 import arcjet, { fixedWindow } from "@/lib/arcjet";
-
 import { prisma } from "@/lib/db";
 import { ApiResponse } from "@/lib/types";
-
-
 import { courseSchema, CourseSchemaType } from "@/lib/zodSchemas";
 import { request } from "@arcjet/next";
-import {stripe} from "@/lib/stripe";
 
+// Stripe nincs bekötve, nem importálunk stripe-ot
 
 const aj = arcjet.withRule(
   fixedWindow({
@@ -20,65 +17,38 @@ const aj = arcjet.withRule(
   })
 );
 
-export async function CreateCourse(
-  values: CourseSchemaType
-): Promise<ApiResponse> {
+export async function CreateCourse(values: CourseSchemaType): Promise<ApiResponse> {
   const session = await requireAdmin();
 
   try {
     const req = await request();
-    const decision = await aj.protect(req, {
-      fingerprint: session.user.id,
-    });
+    const decision = await aj.protect(req, { fingerprint: session.user.id });
 
     if (decision.isDenied()) {
       if (decision.reason.isRateLimit()) {
-        return {
-          status: "error",
-          message: "You have been blocked due to rate limiting",
-        };
+        return { status: "error", message: "You have been blocked due to rate limiting" };
       } else {
-        return {
-          status: "error",
-          message: "You are a bot! if this is a mistake contact our support",
-        };
+        return { status: "error", message: "You are a bot! if this is a mistake contact our support" };
       }
     }
 
-    const validation = courseSchema.safeParse(values);
-
-    if (!validation.success) {
-      return {
-        status: "error",
-        message: "Invalid Form Data",
-      };
+    const parsed = courseSchema.safeParse(values);
+    if (!parsed.success) {
+      return { status: "error", message: "Invalid Form Data" };
     }
 
-    const data = await stripe.products.create({
-      name: validation.data.title,
-      description: validation.data.smallDescription,
-      default_price_data: {
-        currency: "usd",
-        unit_amount: validation.data.price * 100,
-      },
-    });
-
+    // Mivel Stripe nincs, stripePriceId mindig null
     await prisma.course.create({
       data: {
-        ...validation.data,
-        userId: session?.user.id as string,
-        stripePriceId: data.default_price as string,
+        ...parsed.data,
+        userId: session.user.id,
+        stripePriceId: null,
       },
     });
 
-    return {
-      status: "success",
-      message: "Course created succesfully",
-    };
-  } catch {
-    return {
-      status: "error",
-      message: "Failed to create course",
-    };
+    return { status: "success", message: "Course created successfully" };
+  } catch (err) {
+    console.error("CreateCourse error:", err);
+    return { status: "error", message: "Failed to create course" };
   }
 }
