@@ -125,3 +125,13 @@ lms becodemy + rn
 2 + 10
 1000 + 50 + 20 min
 1 qi gong
+1 edzés 5 kör
+1 séta
+----
+Anglisztika !
+Mi !
+Jog !
+buddh tan !
+VM
+gépészm
+----
