@@ -1,3 +1,41 @@
+tube 6
+antonio 5
+jan 2
+wp 2
+becodemy 2
+websocket 2
+jsmastery 2 vapi devinai
+django 2
+nestjs 2
+webdev lms
+ecom bassir
+ecom sanghjaam
+sanghjaam nextjs
+pymicro
+ai 3
+sonny 4
+----
+sonny 4
+galaxy 3
+ecom 2
+sunaj 3
+tube 1
+uber 1
+-----
+lms
+devinai
+lms rn
+ecom rn
+fitness rn
+ecom becod
+travel tube
+travel rn
+meditation rn
+echo ai antonio
+vibe antonio
+----
+
+
 tube 5 vapi, carreer, interview, personal, image
 vibe antonio
 lms jan
@@ -32,33 +70,37 @@ séta
 now:
 lms jan ! szakdoga
 lms rn ! szakgoga galaxi
-ecom becod ! szakdoga
-ecom rn ! szakdoga galaxies
+ecom becod ! szakdoga + rn
+ecom rn ! szakdoga galaxi
+js mast devonai
 travel planner nextjs
 travel rn sunaj
 customer ai antonio
 personnal ai !
 webinar !
-vibe !
+vibe antonio!
+meet.ai !
 fitness rn !
 bassir ecom !
 grouple !
+lms becodemy + rn
+meditation rn
+lms webdev
 -----
 sanghjaam ecom
 uber
+digital jan
 ecom rn 2.
 ecom node rn
-lms becod
-interviewer
+interviewer 2
 career
-vapi
-webdev lms
+vapi medical
 django ecom
 django ecom
 django banking
 django celery
 websocket 2
-interview prep
+interview prep tube
 ----
 booleanart
 jan
@@ -132,6 +174,18 @@ Anglisztika !
 Mi !
 Jog !
 buddh tan !
-VM
-gépészm
+VM ?
+gépészm ?
+Szoftv ! c#
 ----
+matek magántanítás
+---
+no cukor
+20 min qi gong
+20 séta
+2000 + 100
+vega
+tea helyett ásványvíz
+bp kávé nap
+alvás 8 óra
+----"# lmsj" 
