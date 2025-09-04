@@ -1,7 +1,9 @@
 import { getAllCourses } from "@/app/data/course/get-all-courses";
-
+import {
+  PublicCourseCard,
+  PublicCourseCardSkeleton,
+} from "../_components/PublicCourseCard";
 import { Suspense } from "react";
-import { PublicCourseCard, PublicCourseCardSkeleton } from "./_components/PublicCourseCard";
 
 export const dynamic = "force-dynamic";
 
@@ -26,10 +28,7 @@ export default function PublicCoursesroute() {
 }
 
 async function RenderCourses() {
-  console.log('HERE')
   const courses = await getAllCourses();
-
-  console.log(courses, 'courses')
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
