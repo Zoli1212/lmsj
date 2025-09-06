@@ -66,7 +66,7 @@ export function NavUser() {
                     : session?.user.email.split("@")[0]}
                 </span>
                 <span className="text-muted-foreground truncate text-xs">
-                  jan@gmail.com
+                  {session?.user.email}
                 </span>
               </div>
               <IconDotsVertical className="ml-auto size-4" />

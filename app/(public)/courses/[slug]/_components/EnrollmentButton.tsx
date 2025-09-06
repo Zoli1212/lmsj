@@ -17,6 +17,7 @@ export function EnrollmentButton({ courseId }: { courseId: string }) {
       );
 
       if (error) {
+        console.error("Enrollment error:", error);
         toast.error("An unexpected error occurred. Please try again.");
         return;
       }
@@ -24,6 +25,7 @@ export function EnrollmentButton({ courseId }: { courseId: string }) {
       if (result.status === "success") {
         toast.success(result.message);
       } else if (result.status === "error") {
+        console.error("Enrollment failed:", result.message);
         toast.error(result.message);
       }
     });
