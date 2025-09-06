@@ -174,7 +174,7 @@ export default async function SlugPage({ params }: { params: Params }) {
                   {new Intl.NumberFormat("hu-HU", {
                     style: "currency",
                     currency: "HUF",
-                  }).format(course.price / 100)}
+                  }).format(course.price)}
                 </span>
               </div>
 
