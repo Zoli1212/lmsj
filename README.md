@@ -188,4 +188,22 @@ vega
 tea helyett ásványvíz
 bp kávé nap
 alvás 8 óra
-----"# lmsj" 
+----
+egy füldugó
+rövid haj
+lúgos étrend 
+qi gong napi 4 v 15 perc
+fejmasszázs
+menekülés!
+gyulladáscsökkentő
+C vitamin
+séta
+hűtés
+edzés
+hűtés
+roham elkerülése
+C - 4000
+szódabikarbóna
+séta guggolás
+vérkeringés
+----
