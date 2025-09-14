@@ -41,7 +41,7 @@ async function ensureStripePriceIdForCourse(course: {
       
       // Ha inaktív, töröljük a price ID-t és hozzunk létre újat
       console.log(`Product ${product.id} is inactive, creating new product and price`);
-    } catch (error) {
+    } catch {
       console.log(`Price ${course.stripePriceId} not found, creating new one`);
     }
   }
@@ -199,12 +199,12 @@ export async function enrollInCourseAction(courseId: string): Promise<ApiRespons
     });
 
     // Ha a tranzakció "already enrolled" üzenetet adott vissza, ne redirecteljünk a Stripe-ra
-    if ((result as any)?.status === "success" && (result as any)?.message?.includes("already")) {
+    if ('status' in result && result.status === "success" && 'message' in result && typeof result.message === 'string' && result.message.includes("already")) {
       return result as ApiResponse;
     }
 
-    checkoutUrl = (result as any).checkoutUrl as string;
-  } catch (error: any) {
+    checkoutUrl = 'checkoutUrl' in result ? result.checkoutUrl as string : '';
+  } catch (error: unknown) {
     console.error("enrollInCourseAction error:", error);
     
     // Stripe hibák elkülönítése
@@ -234,7 +234,7 @@ export async function enrollInCourseAction(courseId: string): Promise<ApiRespons
     // Egyéb hibák részletes naplózása
     return { 
       status: "error", 
-      message: error.message || "Failed to enroll in course" 
+      message: error instanceof Error ? error.message : "Failed to enroll in course" 
     };
   }
 

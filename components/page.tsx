@@ -41,10 +41,11 @@ import { RichTextEditor } from "@/components/rich-text-editor/Editor";
 import { Uploader } from "@/components/file-uploader/Uploader";
 import { useTransition } from "react";
 import { tryCatch } from "@/hooks/try-catch";
-import { CreateCourse } from "./actions";
+
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { useConfetti } from "@/hooks/use-confetti";
+import { CreateCourse } from "@/app/admin/courses/create/actions";
 
 export default function CourseCreationPage() {
   const [pending, startTransition] = useTransition();

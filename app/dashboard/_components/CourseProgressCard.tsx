@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { EnrolledCourseType } from "@/app/data/user/get-enrolled-courses";
@@ -20,7 +19,7 @@ interface iAppProps {
 export function CourseProgressCard({ data }: iAppProps) {
   const thumbnailUrl = useConstructUrl(data.Course.fileKey);
   const { totalLessons, completedLessons, progressPercentage } =
-    useCourseProgress({ courseData: data.Course as any });
+    useCourseProgress({ courseData: data.Course });
   return (
     <Card className="group relative py-0 gap-0">
       <Badge className="absolute top-2 right-2 z-10">{data.Course.level}</Badge>

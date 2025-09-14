@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { EditorContent, useEditor } from "@tiptap/react";
@@ -6,7 +5,12 @@ import StarterKit from "@tiptap/starter-kit";
 import { Menubar } from "./Menubar";
 import TextAlign from "@tiptap/extension-text-align";
 
-export function RichTextEditor({ field }: { field: any }) {
+interface FieldProps {
+  value?: string;
+  onChange: (value: string) => void;
+}
+
+export function RichTextEditor({ field }: { field: FieldProps }) {
   const editor = useEditor({
     extensions: [
       StarterKit,

@@ -222,11 +222,11 @@ export function Uploader({ onChange, value, fileTypeAccepted }: iAppProps) {
   function rejectedFiles(fileRejection: FileRejection[]) {
     if (fileRejection.length) {
       const tooManyFiles = fileRejection.find(
-        (rejection) => rejection.errors[0].code === "too-many-files"
+        (rejection) => rejection.errors[0]?.code === "too-many-files"
       );
 
       const fileSizeToBig = fileRejection.find(
-        (rejection) => rejection.errors[0].code === "file-too-large"
+        (rejection) => rejection.errors[0]?.code === "file-too-large"
       );
 
       if (fileSizeToBig) {
